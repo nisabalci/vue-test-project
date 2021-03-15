@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Test Project 2</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        Adet : <input type="text" v-model="sellCount">
+        <ul>
+            <li v-for="product in productList" :class="">
+                <span>{{ product.title }} - {{ product.count }}</span>
+                <button :disabled="product.count == 0" @click="sellProduct(product)">Satıldı</button>
+            </li>
+            <p v-if= "sellWarning">Girdiğiniz miktar stok adetlerinden fazladır.</p>
+        </ul>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
